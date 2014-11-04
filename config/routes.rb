@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'pictures' => 'pictures#index' ## create a new webpage at http://localhost:3000
-  
+  get 'pictures' => 'pictures#index' ## create a new webpage at http://localhost:3000 (calling index method from pictures controller)
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
