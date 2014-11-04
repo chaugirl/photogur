@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'pictures' => 'pictures#index' # create a new webpage at http://localhost:3000 (calling index method from pictures controller)
 
+  post 'pictures' => 'pictures#create'
+  get 'pictures/new' => 'pictures#new'
+
   get 'pictures/:id' => 'pictures#show', as: 'picture' ## to see each picture individually at their own URLs
   
   # The priority is based upon order of creation: first created -> highest priority.
