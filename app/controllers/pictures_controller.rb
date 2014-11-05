@@ -24,6 +24,18 @@ class PicturesController < ApplicationController  ## ApplicationController is a 
     end
   end
 
+  def edit
+    @picture = Picture.find(params[:id])
+  end
+
+  def update
+    if @picture.update_attributes(picture_params)
+      redirect_to "/pictures/#{@picture.id}"
+    else
+      render :edit
+    end
+  end
+
   private
   def picture_params
     params.require(:picture).permit(:artist, :title, :url)
