@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
   root 'pictures#index'
-  get 'pictures' => 'pictures#index' # create a new webpage at http://localhost:3000 (calling index method from pictures controller)
+  # get 'pictures' => 'pictures#index' # create a new webpage at http://localhost:3000 (calling index method from pictures controller)
 
-  post 'pictures' => 'pictures#create'
-  get 'pictures/new' => 'pictures#new'
+  # post 'pictures' => 'pictures#create'
+  # get 'pictures/new' => 'pictures#new'
 
-  get 'pictures/:id' => 'pictures#show', as: 'picture' ## to see each picture individually at their own URLs
+  # get 'pictures/:id' => 'pictures#show', as: 'picture' ## to see each picture individually at their own URLs
 
-  get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
-  patch 'pictures/:id' => "pictures#update"
+  # get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
+  # patch 'pictures/:id' => "pictures#update"
 
-  delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
+  # delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
+
+  resources :pictures
 
   #root 'pictures#index'
   
