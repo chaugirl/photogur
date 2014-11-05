@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'pictures#index'
   get 'pictures' => 'pictures#index' # create a new webpage at http://localhost:3000 (calling index method from pictures controller)
 
   post 'pictures' => 'pictures#create'
