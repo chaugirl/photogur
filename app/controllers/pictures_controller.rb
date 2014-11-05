@@ -4,7 +4,7 @@ class PicturesController < ApplicationController  ## ApplicationController is a 
   	end
 
   	def show	#created route in routes.rb, now we need to define action in controller -> pictures_controller.rb
-  		@pictures = Picture.find(params[:id])
+  		@picture = Picture.find(params[:id])
   	end
 
   	def new
